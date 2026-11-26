@@ -170,18 +170,19 @@ const catColor = c => CATEGORY_COLORS[c] || "#a0663a";
 
 //PRODUTOS
 const COLORS = {
-  vermelho: { name: "Vermelho",  hex: "#e5383b" },
-  laranja:  { name: "Laranja",   hex: "#f07d2a" },
-  amarelo:  { name: "Amarelo",   hex: "#f5b82e" },
-  verde:    { name: "Verde",     hex: "#2faa5e" },
-  azul:     { name: "Azul",      hex: "#2f6fed" },
-  roxo:     { name: "Roxo",      hex: "#8450e0" },
-  rosa:     { name: "Rosa",      hex: "#ee6fa8" },
-  branco:   { name: "Branco",    hex: "#f4f4f4" },
-  preto:    { name: "Preto",     hex: "#25262b" },
-  dourado:  { name: "Dourado",   hex: "#c9a227" },
-  marmore:  { name: "Mármore",   hex: "#e6e6e6" },
-  bege:     { name: "Bege",      hex: "#e2d2bd" }
+  vermelho:  { name: "Vermelho",  hex: "#e5383b" },
+  laranja:   { name: "Laranja",   hex: "#f07d2a" },
+  amarelo:   { name: "Amarelo",   hex: "#f5b82e" },
+  verde:     { name: "Verde",     hex: "#2faa5e" },
+  azul:      { name: "Azul",      hex: "#2f6fed" },
+  roxo:      { name: "Roxo",      hex: "#8450e0" },
+  rosa:      { name: "Rosa",      hex: "#ee6fa8" },
+  branco:    { name: "Branco",    hex: "#f4f4f4" },
+  preto:     { name: "Preto",     hex: "#25262b" },
+  dourado:   { name: "Dourado",   hex: "#c9a227" },
+  marmore:   { name: "Mármore",   hex: "#e6e6e6" },
+  bege:      { name: "Bege",      hex: "#e2d2bd" },
+  cor_unica: { name: "Cor única", hex: "#afafaf" }
 };
 const pick = (...keys) => keys.map(k => COLORS[k]);
 
@@ -194,42 +195,52 @@ const PRODUCTS = [
   {
     id: "nat-001", category: "Natal", name: "Lâmpada Árvore de Natal",
     description: "Árvore branca com led. Leve, resistente e fácil de combinar.",
-    price: 34.90, images: ["imagens/arvore-branca.jpg"], colors: pick("branco")
+    price: 19.90, images: ["imagens/arvore-branca.jpg"], colors: pick("cor_unica")
   },
   {
     id: "nat-002", category: "Natal", name: "Árvore de natal com vela",
     description: "Árvore de natal verde com vela led. Luz aconchegante com sombras de estrela.",
-    price: 44.90, images: ["imagens/arvore-verde.jpg"], colors: pick("verde")
+    price: 21.90, images: ["imagens/arvore-verde.jpg"], colors: pick("cor_unica")
   },
   {
     id: "nat-003", category: "Natal", name: "Bandeja com Presépio e Árvore de Natal",
     description: "Presépio minimalista com bandeja e árvore de natal. Simples e moderno.",
-    price: 27.90, images: ["imagens/presepio-minimalista.jpg"], colors: pick("branco")
+    price: 39.90, images: ["imagens/presepio-minimalista.jpg"], colors: pick("cor_unica")
   },
   {
     id: "nat-004", category: "Natal", name: "Presépio Sagrada Família",
     description: "Presépio Sagrada família. Inclui 3 peças: Jesus, Maria e José",
-    price: 69.90, images: ["imagens/presepio-colorido.jpg"], colors: pick("branco")
+    price: 64.95, images: ["imagens/presepio-colorido.jpg"], colors: pick("cor_unica")
   },
   {
     id: "nat-005", category: "Natal", name: "Enfeite de Árvore de Natal",
     description: "Enfeite em formato de presente. Suas melhores memórias decorando sua árvore.",
-    price: 39.90, images: ["imagens/presente-dourado.jpg", "imagens/presente-verde.jpg"], colors: pick("dourado", "verde")
+    price: 8.90, images: ["imagens/presente-dourado.jpg", "imagens/presente-verde.jpg"], colors: pick("dourado", "verde")
   },  
   {
     id: "nat-006", category: "Natal", name: "Porta-terço",
     description: "Porta-terço Nossa senhora do Rosário. Ideal para presentear.",
-    price: 22.90, images: ["imagens/porta-terco.jpg"], colors: pick("marmore")
+    price: 22.90, images: ["imagens/porta-terco.jpg"], colors: pick("marmore", "branco", "bege")
   },
   {
     id: "nat-007", category: "Natal", name: "Kit Natalino",
     description: "Papai Noel, rena, boneco de neve e árvore sobre uma bandeja.",
-    price: 22.90, images: ["imagens/kit-natalino.jpg"], colors: pick("bege")
+    price: 39.90, images: ["imagens/kit-natalino.jpg"], colors: pick("cor_unica")
   },
   {
     id: "nat-008", category: "Natal", name: "Árvore de Natal Moderna",
     description: "Árvore de natal dourada com design minimalista, simples e elegante.",
-    price: 22.90, images: ["imagens/arvore-moderna.jpg"], colors: pick("dourado")
+    price: 19.90, images: ["imagens/arvore-moderna.jpg"], colors: pick("dourado", "vermelho", "verde")
+  },
+  {
+    id: "nat-009", category: "Natal", name: "Calendário do Advento",
+    description: "Calendário do advento 25 dias contagem progressiva até o natal.",
+    price: 59.90, images: ["imagens/calendario-advento.png"], colors: pick("cor_unica")
+  },
+  {
+    id: "nat-010", category: "Natal", name: "Estrela de Topo",
+    description: "Estrela de topo para árvore de natal. Ideal para completar o visual da sua árvore.",
+    price: 14.90, images: ["imagens/estrela-topo.jpg"], colors: pick("cor_unica")
   }
 ];
 
